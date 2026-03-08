@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengawas Pusat Sumber | Portal Rasmi SMK Kimanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="unit-page-body">
+  <main class="unit-page-wrap" data-unit-key="pengawasPusatSumber">
+    <section class="unit-page-hero">
+      <div>
+        <div class="unit-page-badge">🏫 Direktori Unit HEM</div>
+        <h1 class="unit-page-title">Pengawas Pusat Sumber</h1>
+        <p class="unit-page-subtitle">Direktori rasmi pengawas pusat sumber SMK Kimanis untuk sesi 2026. Halaman ini telah disediakan khusus untuk memudahkan anda menambah ahli unit kemudian tanpa perlu mengubah keseluruhan portal utama.</p>
+        <div class="unit-page-actions">
+          <a class="unit-page-btn primary" href="../../index.html#hem">Kembali ke Portal HEM</a>
+          <a class="unit-page-btn secondary" href="../../assets/js/data/unit-members.js">Buka Fail Data Unit</a>
+        </div>
+      </div>
+      <aside class="unit-page-aside">
+        <div class="unit-page-stat">
+          <div class="unit-stat-card">
+            <div class="unit-stat-value" id="unit-member-count">0 ahli direkodkan</div>
+            <div class="unit-stat-label">Status Semasa</div>
+          </div>
+          <div class="unit-stat-card">
+            <div class="unit-stat-value">4 medan</div>
+            <div class="unit-stat-label">Nama • Kelas • Jawatan • Gambar</div>
+          </div>
+        </div>
+        <div class="unit-edit-note">Sistem telah disediakan siap. Apabila anda ada nama ahli, kemas kini sahaja fail <strong>assets/js/data/unit-members.js</strong> pada bahagian <strong>pengawasPusatSumber</strong>.</div>
+      </aside>
+    </section>
+
+    <section class="unit-content-grid">
+      <div class="unit-card-surface">
+        <h2 class="unit-card-title">Kad Ahli Unit</h2>
+        <p class="unit-card-subtitle">Paparan premium seperti portal universiti untuk ahli unit yang telah dimasukkan.</p>
+        <div class="unit-member-grid" id="unit-member-grid"></div>
+      </div>
+      <div class="unit-card-surface">
+        <h2 class="unit-card-title">Panduan Kemas Kini</h2>
+        <p class="unit-card-subtitle">Tambah rekod dalam format yang seragam untuk memastikan paparan sentiasa kemas.</p>
+        <ul class="unit-guideline-list">
+          <li><span>1️⃣</span><div>Masukkan <strong>nama penuh pengawas/ahli unit</strong> seperti dalam rekod rasmi sekolah.</div></li>
+          <li><span>2️⃣</span><div>Masukkan <strong>kelas</strong> contohnya <em>3 Amanah</em> atau <em>5 STEM 1</em>.</div></li>
+          <li><span>3️⃣</span><div>Masukkan <strong>jawatan dalam unit</strong> contohnya Ketua Pengawas, Penolong Ketua, Setiausaha atau Ahli.</div></li>
+          <li><span>4️⃣</span><div>Masukkan <strong>laluan gambar</strong> dalam folder imej jika gambar sudah tersedia.</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="unit-card-surface" style="margin-top:24px;">
+      <h2 class="unit-card-title">Jadual Rekod Ahli</h2>
+      <p class="unit-card-subtitle">Struktur jadual yang sama boleh digunakan untuk semua unit.</p>
+      <div style="overflow:auto;">
+        <table class="unit-directory-table">
+          <thead>
+            <tr>
+              <th>Bil</th>
+              <th>Nama Penuh</th>
+              <th>Kelas</th>
+              <th>Jawatan dalam Unit</th>
+              <th>Status Gambar</th>
+            </tr>
+          </thead>
+          <tbody id="unit-member-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="../../assets/js/data/unit-members.js"></script>
+  <script src="../../assets/js/features/unit-directory.js"></script>
+</body>
+</html>
