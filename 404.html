@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="ms" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK Kimanis Portal 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <meta name="description" content="Portal rasmi SMK Kimanis sesi 2026 merangkumi pengurusan, kurikulum, HEM, kokurikulum, data murid, PIBG, takwim dan hubungi.">
+  <meta name="theme-color" content="#1e3a5f">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/png" href="https://i.ibb.co/XZmRd56Q/1-1.png">
+
+</head>
+<body>
+<div class="app-wrapper">
+<!-- PENGUMUMAN BANNER -->
+<div class="no-print bg-amber-500 text-white text-sm py-2 px-4 relative" id="pengumuman-bar">
+<div class="max-w-screen-xl mx-auto flex items-center gap-3">
+<span class="shrink-0 font-bold text-amber-900 bg-amber-300 rounded px-2 py-0.5 text-xs uppercase tracking-wide">📢 Pengumuman</span>
+<div class="overflow-hidden flex-1" style="min-width:0">
+<div class="whitespace-nowrap" id="ticker-wrap" style="animation: ticker 35s linear infinite;">
+<span class="ticker-item mx-8">📅 <strong>Program Agihan Bubur Lambuk &amp; Majlis Berbuka Puasa</strong> | 14 Mac 2026 (Sabtu) | 4.00 Petang – 9.00 Malam | <em>Dewan Harmoni</em></span>
+<span class="ticker-item mx-8">🏫 <strong>Mesyuarat Agung Persatuan Ibubapa dan Guru (PIBG)</strong> | 14 Mac 2026 (Sabtu) | 2.00 Petang – 4.00 Petang | <em>Bilik Motivasi</em></span>
+</div>
+</div>
+<button class="shrink-0 text-amber-100 hover:text-white ml-2 font-bold text-lg leading-none" onclick="document.getElementById('pengumuman-bar').style.display='none'" title="Tutup">✕</button>
+</div>
+</div>
+
+<!-- TOP NAV -->
+<nav class="sticky top-0 z-50 bg-white shadow-md no-print">
+<div class="max-w-screen-xl mx-auto px-4">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
+<img alt="Logo SMK Kimanis" class="w-11 h-11 rounded-full object-cover shadow" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%231e3a5f%22/&gt;&lt;text x=%2250%22 y=%2263%22 text-anchor=%22middle%22 font-size=%2238%22 fill=%22%23c9a227%22 font-weight=%22bold%22&gt;SK&lt;/text&gt;&lt;/svg&gt;'" src="https://i.ibb.co/XZmRd56Q/1-1.png"/>
+<div>
+<div class="font-heading font-bold text-blue-900 leading-tight text-base">SMK KIMANIS</div>
+<div class="text-xs text-gray-400 leading-tight">Sesi 2026</div>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-0.5">
+<button class="nav-link text-gray-600 font-medium" id="nav-home" onclick="navigateTo('home')">🏠 Utama</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-pengurusan" onclick="navigateTo('pengurusan')">📋 Pengurusan</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-kurikulum" onclick="navigateTo('kurikulum')">📖 Kurikulum</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-hem" onclick="navigateTo('hem')">👨‍🎓 HEM</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-kokum" onclick="navigateTo('kokum')">🏆 Kokurikulum</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-murid" onclick="navigateTo('murid')">📊 Data Murid</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-pibg" onclick="navigateTo('pibg')">👨‍👩‍👧 PIBG</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-takwim" onclick="navigateTo('takwim')">📅 Takwim</button>
+<button class="nav-link text-gray-600 font-medium" id="nav-hubungi" onclick="navigateTo('hubungi')">📞 Hubungi</button>
+</div>
+<button class="xl:hidden p-2 rounded-lg hover:bg-gray-100" onclick="toggleMobileMenu()">
+<svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="hidden xl:hidden pb-4 grid grid-cols-2 gap-1" id="mobile-menu">
+<button class="mobile-menu-item" onclick="navigateTo('home')">🏠 Utama</button>
+<button class="mobile-menu-item" onclick="navigateTo('pengurusan')">📋 Pengurusan</button>
+<button class="mobile-menu-item" onclick="navigateTo('kurikulum')">📖 Kurikulum</button>
+<button class="mobile-menu-item" onclick="navigateTo('hem')">👨‍🎓 HEM</button>
+<button class="mobile-menu-item" onclick="navigateTo('kokum')">🏆 Kokurikulum</button>
+<button class="mobile-menu-item" onclick="navigateTo('murid')">📊 Data Murid</button>
+<button class="mobile-menu-item" onclick="navigateTo('pibg')">👨‍👩‍👧 PIBG</button>
+<button class="mobile-menu-item" onclick="navigateTo('takwim')">📅 Takwim</button>
+<button class="mobile-menu-item" onclick="navigateTo('hubungi')">📞 Hubungi</button>
+</div>
+</div>
+</nav>
+<!-- ======== HOME ======== -->
+<section class="section-container active" id="home">
+<!-- Hero -->
+<div class="gradient-hero text-white py-16 px-4">
+<div class="max-w-screen-xl mx-auto">
+<div class="grid md:grid-cols-2 gap-10 items-center">
+<div>
+<div class="hero-badge">🎯 SESI AKADEMIK 2026</div>
+<h1 class="font-heading text-4xl md:text-5xl font-bold mb-3 leading-tight">Sekolah Menengah<br/>Kebangsaan Kimanis</h1>
+<p class="text-amber-300 italic text-lg mb-2">"Iltizam Teras Kegemilangan"</p>
+<p class="text-blue-200 mb-2 text-sm">"Mun Bakarih, Andang Tah Belurih, Semua Tah Bolih"</p>
+<p class="text-blue-100 text-sm mb-6 leading-relaxed">Berusaha Bersama, Tanpa Menyerah, Semua Boleh — SMK Kimanis komited melahirkan generasi cemerlang, gemilang, terbilang.</p>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2.5 bg-amber-400 text-blue-900 rounded-lg font-semibold hover:bg-amber-300 transition text-sm" onclick="navigateTo('pengurusan')">Tentang Sekolah</button>
+<button class="px-6 py-2.5 bg-white/20 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/30 transition text-sm" onclick="navigateTo('murid')">Data Murid</button>
+</div>
+</div>
+<div class="flex justify-center">
+<div class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8 shadow-2xl flex flex-col items-center gap-4" style="min-width:280px">
+<img alt="Logo SMK Kimanis" class="w-40 h-40 rounded-full object-cover shadow-xl border-4 border-amber-400/50" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%231e3a5f%22/&gt;&lt;text x=%2250%22 y=%2263%22 text-anchor=%22middle%22 font-size=%2238%22 fill=%22%23c9a227%22 font-weight=%22bold%22&gt;SK&lt;/text&gt;&lt;/svg&gt;'" src="https://i.ibb.co/XZmRd56Q/1-1.png"/>
+<div class="text-center">
+<div class="font-heading text-xl font-bold">SMK KIMANIS</div>
+<div class="text-blue-200 text-xs mt-1">Peti Surat 18, 89700 Bongawan Papar</div>
+<div class="mt-3 flex gap-2 justify-center">
+<span class="badge" style="background:rgba(201,162,39,0.3);color:#f0d060">Gred B</span>
+<span class="badge" style="background:rgba(255,255,255,0.15);color:#e2e8f0">Bantuan Penuh KPM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="bg-white py-10 px-4 border-b border-gray-100">
+<div class="max-w-screen-xl mx-auto">
+<div class="stats-grid">
+<div class="stat-card border-t-4 border-blue-500">
+<div class="text-3xl font-bold text-blue-900">538</div>
+<div class="text-gray-500 text-sm mt-1">Murid</div>
+</div>
+<div class="stat-card border-t-4 border-green-500">
+<div class="text-3xl font-bold text-blue-900">42</div>
+<div class="text-gray-500 text-sm mt-1">Guru</div>
+</div>
+<div class="stat-card border-t-4 border-purple-500">
+<div class="text-3xl font-bold text-blue-900">8</div>
+<div class="text-gray-500 text-sm mt-1">AKP</div>
+</div>
+<div class="stat-card border-t-4 border-amber-500">
+<div class="text-3xl font-bold text-blue-900">20</div>
+<div class="text-gray-500 text-sm mt-1">Kelas</div>
+</div>
+<div class="stat-card border-t-4 border-red-500">
+<div class="text-3xl font-bold text-blue-900">13</div>
+<div class="text-gray-500 text-sm mt-1">Kelab &amp; Persatuan</div>
+</div>
+<div class="stat-card border-t-4 border-indigo-500">
+<div class="text-3xl font-bold text-blue-900">8</div>
+<div class="text-gray-500 text-sm mt-1">Badan Beruniform</div>
+</div>
+<div class="stat-card border-t-4 border-teal-500">
+<div class="text-3xl font-bold text-blue-900">8</div>
+<div class="text-gray-500 text-sm mt-1">Pasukan Sukan</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Lagu Sekolah + Sejarah -->
+<div class="py-10 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+<div class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-8">
+<!-- Lagu -->
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="gradient-header text-white py-4 px-6">
+<h3 class="font-heading text-xl font-bold">🎵 Lagu Sekolah</h3>
+<p class="text-blue-200 text-sm">Iltizam Teras Kegemilangan</p>
+</div>
+<div class="p-6">
+<div class="bg-amber-50 rounded-xl p-5 border-l-4 border-amber-400">
+<p class="text-gray-800 text-center leading-8 italic whitespace-pre-line font-medium text-sm">Iltizam teras kegemilangan
+Menuju kejayaan
+Marilah kita bertekad
+Jadi insan sejati
+
+Cemerlang, gemilang, terbilang
+Jadi prinsip dan pedoman
+Mantapkan rohani dan jasmani
+Demi masa hadapan
+
+Guru mendidik tuhan rahmati
+Jasa kan tetap disanjung
+SMK Kimanis Papar
+Sekolah yang tercinta
+Sekolah tercinta</p>
+</div>
+<p class="text-xs text-gray-400 mt-3 text-right">Lagu: En. Rosman M | Lirik: En. Suhaibun Bin Kadir</p>
+</div>
+</div>
+<!-- Maklumat Sekolah -->
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="gradient-header text-white py-4 px-6">
+<h3 class="font-heading text-xl font-bold">🏫 Maklumat Sekolah</h3>
+<p class="text-blue-200 text-sm">Profil Rasmi</p>
+</div>
+<div class="p-6 space-y-0">
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">Nama</span><span class="font-semibold text-blue-900 text-sm text-right">SMK Kimanis</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">Kod</span><span class="font-semibold text-blue-900 text-sm">XEA4264</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">Jenis</span><span class="font-semibold text-blue-900 text-sm">SMK — Bantuan Penuh KPM</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">Gred</span><span class="badge badge-blue">Gred B</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">Peringkat</span><span class="font-semibold text-blue-900 text-sm">Prasekolah &amp; Tingkatan 1 – 5</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">Sesi</span><span class="badge badge-green">Pagi Sahaja</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">Lokasi</span><span class="badge badge-amber">Luar Bandar</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">PPD</span><span class="font-semibold text-blue-900 text-sm">PPD Papar</span></div>
+<div class="info-row"><span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">JPN</span><span class="font-semibold text-blue-900 text-sm">Jabatan Pendidikan Negeri Sabah</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pengurusan Tertinggi cepat -->
+<div class="py-10 px-4 bg-white">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<h3 class="font-heading text-2xl font-bold text-blue-900">👔 Barisan Pengurusan Tertinggi</h3>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-5 text-center card-hover">
+<div class="text-4xl mb-3">🎓</div>
+<div class="text-xs font-bold text-amber-600 uppercase tracking-wide mb-1">Pengetua</div>
+<div class="font-bold text-blue-900 text-sm leading-snug">En. Banjamin @ Ismail bin Atin</div>
+<div class="text-xs text-gray-500 mt-1">Gred DG14 | Ekonomi/Akaun</div>
+</div>
+<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-5 text-center card-hover">
+<div class="text-4xl mb-3">📋</div>
+<div class="text-xs font-bold text-green-700 uppercase tracking-wide mb-1">PK Pentadbiran</div>
+<div class="font-bold text-blue-900 text-sm leading-snug">Pn. Noor Liana binti Abdullah</div>
+<div class="text-xs text-gray-500 mt-1">Gred DG12 | Biologi</div>
+</div>
+<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-5 text-center card-hover">
+<div class="text-4xl mb-3">👨‍🎓</div>
+<div class="text-xs font-bold text-purple-700 uppercase tracking-wide mb-1">PK HEM</div>
+<div class="font-bold text-blue-900 text-sm leading-snug">En. A.M. Norjaini bin Awang Besar</div>
+<div class="text-xs text-gray-500 mt-1">Gred DG12 | Bahasa Melayu</div>
+</div>
+<div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-5 text-center card-hover">
+<div class="text-4xl mb-3">🏆</div>
+<div class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">PK Kokurikulum</div>
+<div class="font-bold text-blue-900 text-sm leading-snug">En. A. Matusin bin Pg. Rambang</div>
+<div class="text-xs text-gray-500 mt-1">Gred DG12 | Geografi</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======== PENGURUSAN ======== -->
+<section class="section-container" id="pengurusan">
+<div class="py-10 px-4 bg-white">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<div class="page-title">📋 Pengurusan Sekolah</div>
+<div class="page-subtitle">Organisasi &amp; Pentadbiran SMK Kimanis 2026</div>
+</div>
+<!-- ===== RUANGAN GAMBAR GURU (Tukar URL gambar secara manual) ===== -->
+<div class="bg-white rounded-xl shadow-sm p-5 mb-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-2xl">📸</span>
+<h3 class="font-bold text-blue-900 text-lg">Barisan Guru SMK Kimanis 2026</h3>
+<span class="ml-auto text-xs text-gray-400 italic">* Tukar URL gambar secara manual dalam kod HTML (id="gambar-guru-N")</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+<div class="text-center"><img alt="Pengetua" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-yellow-300 shadow" id="gambar-guru-1" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">En. Banjamin</p><p class="text-xs text-gray-400">Pengetua</p></div>
+<div class="text-center"><img alt="PK Pentadbiran" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-blue-200 shadow" id="gambar-guru-2" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">Pn. Noor Liana</p><p class="text-xs text-gray-400">PK Pentadbiran</p></div>
+<div class="text-center"><img alt="PK HEM" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-blue-200 shadow" id="gambar-guru-3" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">En. Norjaini</p><p class="text-xs text-gray-400">PK HEM</p></div>
+<div class="text-center"><img alt="PK Kokurikulum" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-blue-200 shadow" id="gambar-guru-4" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">En. Matusin</p><p class="text-xs text-gray-400">PK Kokurikulum</p></div>
+<div class="text-center"><img alt="GKMP Bahasa" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-green-200 shadow" id="gambar-guru-5" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">Pn. Surijah</p><p class="text-xs text-gray-400">GKMP Bahasa</p></div>
+<div class="text-center"><img alt="GKMP Sains &amp; Mat" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-green-200 shadow" id="gambar-guru-6" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">En. Ronezal</p><p class="text-xs text-gray-400">GKMP Sains &amp; Mat</p></div>
+<div class="text-center"><img alt="GKMP TVET" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-green-200 shadow" id="gambar-guru-7" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">Ts. Madzani</p><p class="text-xs text-gray-400">GKMP TVET</p></div>
+<div class="text-center"><img alt="GKMP Sains Sosial" class="w-16 h-16 rounded-full object-cover mx-auto border-4 border-green-200 shadow" id="gambar-guru-8" src="https://i.ibb.co/XZmRd56Q/1-1.png"/><p class="text-xs font-bold mt-1 text-blue-900 leading-tight">Cik Azalina</p><p class="text-xs text-gray-400">GKMP Sains Sosial</p></div>
+</div>
+</div>
+<!-- ===== AKHIR RUANGAN GAMBAR GURU ===== -->
+<!-- Tab -->
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="tab-btn active" onclick="switchTab('peng', 'SLT')">👔 SLT</button>
+<button class="tab-btn" onclick="switchTab('peng', 'GKMP')">📚 GKMP</button>
+<button class="tab-btn" onclick="switchTab('peng', 'guru')">👩‍🏫 Barisan Guru</button>
+<button class="tab-btn" onclick="switchTab('peng', 'kaunselor')">🧠 Kaunselor</button>
+<button class="tab-btn" onclick="switchTab('peng', 'akp')">🗂️ AKP</button>
+<button class="tab-btn" onclick="switchTab('peng', 'sejarah')">📖 Sejarah</button>
+</div>
+<!-- SLT -->
+<div class="tab-content active" id="peng-SLT">
+<div class="grid md:grid-cols-2 gap-4">
+<div class="org-card">
+<div class="text-xs font-bold text-amber-600 uppercase tracking-wide mb-1">Pengetua</div>
+<div class="font-bold text-blue-900">En. Banjamin @ Ismail bin Atin</div>
+<div class="text-sm text-gray-500">Gred DG14 | Opsyen: Ekonomi/Akaun</div>
+</div>
+<div class="org-card">
+<div class="text-xs font-bold text-green-700 uppercase tracking-wide mb-1">Penolong Kanan Pentadbiran</div>
+<div class="font-bold text-blue-900">Pn. Noor Liana binti Abdullah</div>
+<div class="text-sm text-gray-500">Gred DG12 | Opsyen: Biologi</div>
+</div>
+<div class="org-card">
+<div class="text-xs font-bold text-purple-700 uppercase tracking-wide mb-1">PK Hal Ehwal Murid</div>
+<div class="font-bold text-blue-900">En. A.M. Norjaini bin Awang Besar</div>
+<div class="text-sm text-gray-500">Gred DG12 | Opsyen: Bahasa Melayu</div>
+</div>
+<div class="org-card">
+<div class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">PK Kokurikulum</div>
+<div class="font-bold text-blue-900">En. A. Matusin bin Pg. Rambang</div>
+<div class="text-sm text-gray-500">Gred DG12 | Opsyen: Geografi</div>
+</div>
+</div>
+</div>
+<!-- GKMP -->
+<div class="tab-content" id="peng-GKMP">
+<div class="grid md:grid-cols-2 gap-4">
+<div class="org-card" style="border-left-color:#2563eb">
+<div class="text-xs font-bold text-blue-700 uppercase tracking-wide mb-1">GKMP Bahasa</div>
+<div class="font-bold text-blue-900">Pn. Surijah binti Satari</div>
+<div class="text-sm text-gray-500">Gred DG12 | Kesusasteraan Melayu</div>
+</div>
+<div class="org-card" style="border-left-color:#16a34a">
+<div class="text-xs font-bold text-green-700 uppercase tracking-wide mb-1">GKMP Sains &amp; Matematik</div>
+<div class="font-bold text-blue-900">En. Ronezal bin Duin</div>
+<div class="text-sm text-gray-500">Gred DG12 | Matematik/Fizik</div>
+</div>
+<div class="org-card" style="border-left-color:#7c3aed">
+<div class="text-xs font-bold text-purple-700 uppercase tracking-wide mb-1">GKMP TVET</div>
+<div class="font-bold text-blue-900">Ts. Madzani @ Saidie bin Nusa</div>
+<div class="text-sm text-gray-500">Gred DG14 | Sejarah / P. Moral</div>
+</div>
+<div class="org-card" style="border-left-color:#d97706">
+<div class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">GKMP Sains Sosial</div>
+<div class="font-bold text-blue-900">Cik Azalina binti Abdul Wahap</div>
+<div class="text-sm text-gray-500">Gred DG12 | Sejarah</div>
+</div>
+</div>
+</div>
+<!-- Barisan Guru -->
+<div class="tab-content" id="peng-guru">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3" id="guru-list-container"></div>
+</div>
+<!-- Kaunselor -->
+<div class="tab-content" id="peng-kaunselor">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="kaunselor-list-container"></div>
+</div>
+<!-- AKP -->
+<div class="tab-content" id="peng-akp">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3" id="akp-list-container"></div>
+</div>
+<!-- Sejarah -->
+<div class="tab-content" id="peng-sejarah">
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-100 mb-4">
+<h4 class="font-bold text-blue-900 mb-3">📖 Sejarah Penubuhan</h4>
+<p class="text-gray-700 text-sm leading-relaxed mb-3">SMK Bongawan II (kini SMK Kimanis) terletak di kawasan P.176 Kimanis, Daerah Papar, Sabah. Sekolah ini mula beroperasi pada bulan Mac 2005, pada mulanya menumpang bangunan di SMK Bongawan sementara menunggu bangunan baru yang terletak 8 kilometer dari sekolah asal siap sepenuhnya.</p>
+<p class="text-gray-700 text-sm leading-relaxed mb-3">Pelajar terdiri daripada mereka dari perkampungan Malawaring, Mandahan, Kimanis, Seladan, Pikat, Biau dan Kampung Nyaris-Nyaris Bongawan. Pada 20 Jun 2005, sekolah telah berpindah ke bangunan baru sepenuhnya.</p>
+<p class="text-gray-700 text-sm leading-relaxed">Warna biru yang digunakan dalam logo SMK Kimanis adalah berpandukan variasi warna bendera Sabah, bertujuan menggambarkan semangat kekitaan dan sayangkan sekolah dalam kalangan semua warga sekolah yang terdiri daripada pelbagai bangsa dan agama.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-4">
+<div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+<h4 class="font-bold text-blue-900 mb-3">👁️ Visi Sekolah</h4>
+<p class="text-gray-700 text-sm italic">"Menjadi sekolah terdepan dalam menghasilkan generasi yang berdisiplin, berpengetahuan, dan berkontribusi kepada masyarakat."</p>
+</div>
+<div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+<h4 class="font-bold text-blue-900 mb-3">🎯 Misi Sekolah</h4>
+<ul class="text-gray-700 text-sm space-y-1">
+<li>✓ Menyediakan pendidikan akademik cemerlang</li>
+<li>✓ Mengembangkan kemahiran dan bakat murid</li>
+<li>✓ Menerapkan nilai-nilai murni dalam diri pelajar</li>
+<li>✓ Melahirkan insan yang seimbang rohani dan jasmani</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======== KURIKULUM ======== -->
+<section class="section-container" id="kurikulum">
+<div class="py-10 px-4 bg-white">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<div class="page-title">📖 Pengurusan Kurikulum</div>
+<div class="page-subtitle">Panitia, Penyelaras &amp; Program Akademik</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="tab-btn active" onclick="switchTab('kur', 'panitia')">📚 Panitia</button>
+<button class="tab-btn" onclick="switchTab('kur', 'kelas')">🏫 Guru Kelas</button>
+<button class="tab-btn" onclick="switchTab('kur', 'program')">🎯 Program</button>
+<button class="tab-btn" onclick="switchTab('kur', 'peperiksaan')">📝 Peperiksaan</button>
+</div>
+<!-- Panitia -->
+<div class="tab-content active" id="kur-panitia">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<h4 class="font-bold text-blue-900 mb-3 text-sm uppercase tracking-wide">📘 Bidang Bahasa</h4>
+<div class="space-y-2">
+<div class="org-card" style="border-left-color:#2563eb"><div class="text-xs text-gray-500">Ketua Panitia BM</div><div class="font-semibold text-blue-900 text-sm">Pn. Dg. Usnah binti Madzin</div></div>
+<div class="org-card" style="border-left-color:#2563eb"><div class="text-xs text-gray-500">Ketua Panitia BI</div><div class="font-semibold text-blue-900 text-sm">Pn. Siow Hui Lee</div></div>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-blue-900 mb-3 text-sm uppercase tracking-wide">🌍 Sains Sosial</h4>
+<div class="space-y-2">
+<div class="org-card" style="border-left-color:#16a34a"><div class="text-xs text-gray-500">Ketua Panitia Sejarah</div><div class="font-semibold text-blue-900 text-sm">Ts. Madzani @ Saidie bin Nusa</div></div>
+<div class="org-card" style="border-left-color:#16a34a"><div class="text-xs text-gray-500">Ketua Panitia Geografi</div><div class="font-semibold text-blue-900 text-sm">Pn. Noraidah binti Suntang</div></div>
+<div class="org-card" style="border-left-color:#16a34a"><div class="text-xs text-gray-500">Ketua Panitia Pend. Islam</div><div class="font-semibold text-blue-900 text-sm">En. Mohd Iqbal Izzet bin Duraman</div></div>
+<div class="org-card" style="border-left-color:#16a34a"><div class="text-xs text-gray-500">Ketua Panitia Pend. Seni Visual</div><div class="font-semibold text-blue-900 text-sm">En. Afandi bin Yahya</div></div>
+<div class="org-card" style="border-left-color:#16a34a"><div class="text-xs text-gray-500">Ketua Panitia Pend. Moral</div><div class="font-semibold text-blue-900 text-sm">Pn. Jessie Lawrence</div></div>
+<div class="org-card" style="border-left-color:#16a34a"><div class="text-xs text-gray-500">Ketua Panitia PJPK</div><div class="font-semibold text-blue-900 text-sm">En. Shahrulhafiz bin Md Zain</div></div>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-blue-900 mb-3 text-sm uppercase tracking-wide">🔬 Sains &amp; Matematik</h4>
+<div class="space-y-2">
+<div class="org-card" style="border-left-color:#7c3aed"><div class="text-xs text-gray-500">Ketua Panitia Sains</div><div class="font-semibold text-blue-900 text-sm">Pn. Dg Nor Junah binti Awang Mohd Yousoff</div></div>
+<div class="org-card" style="border-left-color:#7c3aed"><div class="text-xs text-gray-500">Ketua Panitia Matematik</div><div class="font-semibold text-blue-900 text-sm">Pn. Jemaya binti Wasiman</div></div>
+<div class="org-card" style="border-left-color:#7c3aed"><div class="text-xs text-gray-500">Penyelaras Add Math</div><div class="font-semibold text-blue-900 text-sm">Pn. Stella Zujip Augustine</div></div>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-blue-900 mb-3 text-sm uppercase tracking-wide">⚙️ TVET</h4>
+<div class="space-y-2">
+<div class="org-card" style="border-left-color:#d97706"><div class="text-xs text-gray-500">Ketua Panitia RBT</div><div class="font-semibold text-blue-900 text-sm">Pn. Dg. Fatimahwati binti Pg. Yahya</div></div>
+<div class="org-card" style="border-left-color:#d97706"><div class="text-xs text-gray-500">Penyelaras Sains Rumahtangga</div><div class="font-semibold text-blue-900 text-sm">Pn. Hasimah binti Sitam</div></div>
+<div class="org-card" style="border-left-color:#d97706"><div class="text-xs text-gray-500">Penyelaras Ekonomi</div><div class="font-semibold text-blue-900 text-sm">Pn. Noorfidah binti Abdul Razak</div></div>
+<div class="org-card" style="border-left-color:#d97706"><div class="text-xs text-gray-500">Penyelaras Sains Sukan</div><div class="font-semibold text-blue-900 text-sm">Pn. Liew Wen Jun</div></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Guru Kelas -->
+<div class="tab-content" id="kur-kelas">
+<div class="table-wrapper">
+<table class="sticky-header">
+<thead>
+<tr>
+<th>Kelas</th>
+<th>Guru Kelas 1</th>
+<th>Guru Kelas 2</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><span class="badge" style="background:#f0fdf4;color:#15803d;border:1px solid #86efac">Prasekolah</span></td><td>Pn. Nurfatin binti Nasir</td><td>—</td></tr>
+<tr><td><span class="badge badge-blue">1 Siddiq</span></td><td>Pn. Dg. Fatimahwati binti Pg. Yahya</td><td>—</td></tr>
+<tr><td><span class="badge badge-blue">1 Tabligh</span></td><td>Pn. Reja Healfris Adon</td><td>Pn. Norlina binti Zaini</td></tr>
+<tr><td><span class="badge badge-blue">1 Fatanah</span></td><td>Pn. Dg Wan Shazwani binti Ag. Ibrahim</td><td>Pn. Jemaya binti Wasiman</td></tr>
+<tr><td><span class="badge badge-blue">1 Amanah</span></td><td>Pn. Fatma Wati binti Ainuddin</td><td>Ustazah Nooraffiza binti Osman</td></tr>
+<tr><td><span class="badge badge-green">2 Siddiq</span></td><td>Pn. Dgku. Saadiah binti Awg. Alimat</td><td>—</td></tr>
+<tr><td><span class="badge badge-green">2 Tabligh</span></td><td>Pn. Noraidah binti Suntang</td><td>—</td></tr>
+<tr><td><span class="badge badge-green">2 Fatanah</span></td><td>Pn. Dg. Nor Junah binti Awang Mohd Yousoff</td><td>Ustazah Dg. Siti Masliana binti Talip</td></tr>
+<tr><td><span class="badge badge-green">2 Amanah</span></td><td>Pn. Kamsiah binti Sidek</td><td>En. Afandi bin Yahya</td></tr>
+<tr><td><span class="badge badge-purple">3 Siddiq</span></td><td>Pn. Alicia Selvester Awang</td><td>—</td></tr>
+<tr><td><span class="badge badge-purple">3 Tabligh</span></td><td>Pn. Siti Hajar binti Zakaria</td><td>—</td></tr>
+<tr><td><span class="badge badge-purple">3 Fatanah</span></td><td>Pn. Norasiah binti Maidin</td><td>Pn. Arinah binti Ajuk @ Ajok</td></tr>
+<tr><td><span class="badge badge-purple">3 Amanah</span></td><td>Pn. Halimah binti Abdul Rahman</td><td>En. Afandy bin Yubah</td></tr>
+<tr><td><span class="badge badge-amber">4 STEM 1</span></td><td>Pn. Rukiah binti Abdullah</td><td>—</td></tr>
+<tr><td><span class="badge badge-amber">4 STEM 2</span></td><td>Pn. Eva Mayse Laurence</td><td>—</td></tr>
+<tr><td><span class="badge badge-amber">4 Kemanusiaan</span></td><td>En. Roland T. Moujip</td><td>Pn. Hasimah binti Sitam</td></tr>
+<tr><td><span class="badge badge-amber">4 Teras</span></td><td>En. Shahrulhafiz bin Md. Zain</td><td>Ustaz Mohd Iqbal Izzet bin Duraman</td></tr>
+<tr><td><span class="badge badge-red">5 STEM 1</span></td><td>Ustazah Dg. Norafiqah binti Mohd Said</td><td>—</td></tr>
+<tr><td><span class="badge badge-red">5 STEM 2</span></td><td>Pn. Liew Wen Jun</td><td>—</td></tr>
+<tr><td><span class="badge badge-red">5 KEM 1</span></td><td>Pn. Noorfidah binti Abd. Razak</td><td>Pn. Dg Siti Farhanah binti Sulaiman</td></tr>
+<tr><td><span class="badge badge-red">5 KEM 2</span></td><td>Pn. Siow Hui Lee</td><td>Pn. Jessie Lawrence Ening</td></tr>
+</tbody>
+</table>
+</div>
+<div class="mt-4 p-4 bg-blue-50 rounded-lg text-sm text-blue-800">
+<strong>Penyelaras Tingkatan 2026:</strong> T1: Pn. Norlina binti Zaini | T2: En. Ronezal bin Duin | T3: Ts. Madzani @ Saidie bin Nusa | T4: Pn. Surijah binti Satari | T5: Cik Azalina binti Abdul Wahap
+          </div>
+</div>
+<!-- Program -->
+<div class="tab-content" id="kur-program">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+<div class="text-2xl mb-2">🔬</div>
+<h4 class="font-bold text-blue-900 mb-1">Program STEM</h4>
+<p class="text-sm text-gray-600">Penyelaras: Pn. Nurhaidah binti Taj Mohamed. Menggabungkan Sains, Teknologi, Kejuruteraan &amp; Matematik dalam pembelajaran.</p>
+</div>
+<div class="bg-green-50 rounded-xl p-5 border border-green-100">
+<div class="text-2xl mb-2">🎯</div>
+<h4 class="font-bold text-blue-900 mb-1">Program i-Think</h4>
+<p class="text-sm text-gray-600">Penyelaras: Ts. Madzani @ Saidie bin Nusa. Peta pemikiran untuk meningkatkan kemahiran berfikir aras tinggi (KBAT).</p>
+</div>
+<div class="bg-purple-50 rounded-xl p-5 border border-purple-100">
+<div class="text-2xl mb-2">📖</div>
+<h4 class="font-bold text-blue-900 mb-1">Program NILAM</h4>
+<p class="text-sm text-gray-600">Penyelaras: Pn. Jessie Lawrence Ening. Memupuk budaya membaca dalam kalangan pelajar.</p>
+</div>
+<div class="bg-amber-50 rounded-xl p-5 border border-amber-100">
+<div class="text-2xl mb-2">📊</div>
+<h4 class="font-bold text-blue-900 mb-1">Dialog Prestasi</h4>
+<p class="text-sm text-gray-600">Penyelaras: Semua GKMP. Sesi perbincangan prestasi headcount bersama guru mata pelajaran.</p>
+</div>
+<div class="bg-red-50 rounded-xl p-5 border border-red-100">
+<div class="text-2xl mb-2">🎓</div>
+<h4 class="font-bold text-blue-900 mb-1">Program APC / Konvo T5</h4>
+<p class="text-sm text-gray-600">Penyelaras: Pn. Surijah binti Satari. Program konvokesyen &amp; Restu Ilmu untuk Tingkatan 5.</p>
+</div>
+<div class="bg-teal-50 rounded-xl p-5 border border-teal-100">
+<div class="text-2xl mb-2">💻</div>
+<h4 class="font-bold text-blue-900 mb-1">Program ICT/ICTL</h4>
+<p class="text-sm text-gray-600">Penyelaras: Pn. Eva Mayse Laurence. Penguasaan teknologi maklumat dalam kalangan pelajar.</p>
+</div>
+</div>
+</div>
+<!-- Peperiksaan -->
+<div class="tab-content" id="kur-peperiksaan">
+<div class="grid md:grid-cols-2 gap-4">
+<div class="org-card" style="border-left-color:#dc2626">
+<div class="text-xs font-bold text-red-700 uppercase tracking-wide mb-1">Setiausaha SPM</div>
+<div class="font-bold text-blue-900">Ustazah Nooraffiza binti Osman</div>
+<div class="text-sm text-gray-500">Pen. SU: Pn. Reja Healfris Adon</div>
+</div>
+<div class="org-card" style="border-left-color:#2563eb">
+<div class="text-xs font-bold text-blue-700 uppercase tracking-wide mb-1">SU Peperiksaan Dalaman (Menengah Atas)</div>
+<div class="font-bold text-blue-900">Pn. Noorfidah binti Abdul Razak</div>
+</div>
+<div class="org-card" style="border-left-color:#16a34a">
+<div class="text-xs font-bold text-green-700 uppercase tracking-wide mb-1">SU Peperiksaan Dalaman (Menengah Rendah)</div>
+<div class="font-bold text-blue-900">Pn. Rukiah binti Abdullah</div>
+</div>
+<div class="org-card" style="border-left-color:#7c3aed">
+<div class="text-xs font-bold text-purple-700 uppercase tracking-wide mb-1">Penyelaras PBD Menengah Atas</div>
+<div class="font-bold text-blue-900">Pn. Kamsiah binti Sidek</div>
+</div>
+<div class="org-card" style="border-left-color:#d97706">
+<div class="text-xs font-bold text-amber-700 uppercase tracking-wide mb-1">Penyelaras PBD Menengah Rendah</div>
+<div class="font-bold text-blue-900">Pn. Dg. Nor Junah Awang Mohd Yousoff</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======== HEM ======== -->
+<section class="section-container" id="hem">
+<div class="py-10 px-4 bg-gray-50">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<div class="page-title">👨‍🎓 Hal Ehwal Murid (HEM)</div>
+<div class="page-subtitle">Pengurusan Kebajikan &amp; Disiplin Pelajar</div>
+</div>
+<div class="mb-2 p-3 bg-white rounded-lg border border-gray-100 shadow-sm flex items-center gap-3">
+<span class="text-2xl">👤</span>
+<div>
+<div class="font-bold text-blue-900 text-sm">Penolong Kanan HEM</div>
+<div class="text-sm text-gray-600">En. A.M. Norjaini bin Awang Besar</div>
+</div>
+<div class="ml-auto text-right">
+<div class="font-bold text-blue-900 text-sm">SU HEM</div>
+<div class="text-sm text-gray-600">Pn. Norlina binti Zaini</div>
+<div class="text-xs text-gray-500">Pen. SU: Pn. Fatma Wati binti Ainuddin</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-red-500">
+<div class="font-bold text-blue-900 mb-2">⚖️ Unit Disiplin</div>
+<div class="text-sm text-gray-600">Ketua: En. Afandy bin Yubah</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: Ust. Mohd Iqbal Izzet bin Duraman (L)</div>
+<div class="text-xs text-gray-500">T. Penyelaras: Pn. Dg Siti Farhanah binti Sulaiman (P)</div>
+<div class="text-xs text-gray-500">SU SSDM: Pn. Noraidah binti Suntang &amp; Pn. Reja Healfris Adon</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-blue-500">
+<div class="font-bold text-blue-900 mb-2">🛡️ Unit Pengawas Sekolah</div>
+<div class="text-sm text-gray-600">Ketua: Pn. Dg. Nor Junah binti Awang Mohd Yousoff</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: Pn. Shiendma binti Simen</div>
+<div class="text-xs text-gray-500">SU: Pn. Siti Hajar binti Zakaria</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-green-500">
+<div class="font-bold text-blue-900 mb-2">💬 Bimbingan &amp; Kaunseling</div>
+<div class="text-sm text-gray-600">Penyelaras: En. Mohammad Nizar bin Abdul Miri</div>
+<div class="text-xs text-gray-500 mt-1">SU: En. Mohammed Lutfi bin Mohd Kalid</div>
+<div class="text-xs text-gray-400 mt-1">(Pembimbing Rakan Sebaya / Sekolah Penyayang)</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-purple-500">
+<div class="font-bold text-blue-900 mb-2">📚 Unit SPBT &amp; Bilik BOSS</div>
+<div class="text-sm text-gray-600">Penyelaras: Ustazah Dg. Siti Masliana binti Talip</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: Pn. Dg. Fatimahwati binti Pg. Yahya</div>
+<div class="text-xs text-gray-500">SU: Pn. Hasimah binti Sitam</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-yellow-500">
+<div class="font-bold text-blue-900 mb-2">🍽️ Unit Kantin</div>
+<div class="text-sm text-gray-600">Penyelaras: Pn. Norasiah binti Maidin</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: Pn. Dg Wan Shazwani binti Ag. Ibrahim</div>
+<div class="text-xs text-gray-500">SU: Pn. Hasimah binti Sitam</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-pink-500">
+<div class="font-bold text-blue-900 mb-2">🏥 Unit 3K</div>
+<div class="text-sm text-gray-600">🔒 Keselamatan: Pn. Jessie Lawrence Ening</div>
+<div class="text-xs text-gray-500 mt-1">🧹 Kebersihan: Pn. Siow Hui Lee | SU: Pn. Dg Wan Shazwani</div>
+<div class="text-xs text-gray-500">🩺 Kesihatan: Pn. Dk. Saadiah binti Awg. Alimat</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-teal-500">
+<div class="font-bold text-blue-900 mb-2">📋 Pendaftaran Murid / APDM</div>
+<div class="text-sm text-gray-600">Penyelaras: Pn. Norlina binti Abd. Razak</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: En. Mohammed Lutfi bin Mohd Kalid</div>
+<div class="text-xs text-gray-500">SU I: Pn. Dg Siti Farhanah | SU II: En. Mohammad Nizar</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-indigo-500">
+<div class="font-bold text-blue-900 mb-2">💰 Unit Biasiswa &amp; Bantuan</div>
+<div class="text-sm text-gray-600">Penyelaras: Ustazah Dg. Norafiqah binti Mohd Said</div>
+<div class="text-xs text-gray-500 mt-1">SU: Pn. Noorfidah binti Abd. Razak</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-orange-500">
+<div class="font-bold text-blue-900 mb-2">🚫 Unit Pencegahan Dadah (PPDa)</div>
+<div class="text-sm text-gray-600">Penyelaras: Pn. Halimah binti Abdul Rahman</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: Pn. Jemaya binti Wasiman</div>
+<div class="text-xs text-gray-500">SU: Pn. Noorfidah binti Abd. Razak</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-cyan-500">
+<div class="font-bold text-blue-900 mb-2">🛡️ Unit Cegah Buli &amp; Gangguan Seksual</div>
+<div class="text-sm text-gray-600">Penyelaras: En. Mohammad Nizar bin Abdul Miri</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: Pn. Dg Siti Farhanah binti Sulaiman</div>
+<div class="text-xs text-gray-500">SU: En. Mohammed Lutfi bin Mohd Kalid</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-lime-500">
+<div class="font-bold text-blue-900 mb-2">🕌 Unit ADNI (Adab, Nilai &amp; Insaniah)</div>
+<div class="text-sm text-gray-600">Penyelaras: En. Mohammed Lutfi bin Mohd Kalid</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: En. Mohammad Nizar bin Abdul Miri</div>
+<div class="text-xs text-gray-500">SU: Pn. Liew Wen Jun</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-rose-500">
+<div class="font-bold text-blue-900 mb-2">🌊 Unit Bencana Sekolah</div>
+<div class="text-sm text-gray-600">Penyelaras: En. Ronezal bin Duin</div>
+<div class="text-xs text-gray-500 mt-1">T. Penyelaras: En. Afandy bin Yubah</div>
+<div class="text-xs text-gray-500">SU: Pn. Arinah binti Ajuk @ Ajok</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======== KOKURIKULUM ======== -->
+<section class="section-container" id="kokum">
+<div class="py-10 px-4 bg-white">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<div class="page-title">🏆 Pengurusan Kokurikulum</div>
+<div class="page-subtitle">Sukan, Kelab &amp; Unit Beruniform 2026</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="tab-btn active" onclick="switchTab('kok', 'sukan')">⚽ Sukan</button>
+<button class="tab-btn" onclick="switchTab('kok', 'kelab')">📚 Kelab</button>
+<button class="tab-btn" onclick="switchTab('kok', 'uniform')">🎖️ Beruniform</button>
+<button class="tab-btn" onclick="switchTab('kok', 'rumah')">🏠 Rumah Sukan</button>
+<button class="tab-btn" onclick="switchTab('kok', 'jadual')">⏰ Perjumpaan</button>
+</div>
+<!-- Sukan -->
+<div class="tab-content active" id="kok-sukan">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-green-50 rounded-xl p-4 border border-green-100">
+<div class="text-2xl mb-2">⚽</div><div class="font-bold text-blue-900 mb-1">Bola Sepak</div>
+<div class="text-xs text-gray-600">K: En. Afandi bin Yahya<br/>PK: En. Afandy bin Yubah<br/>+ 2 guru</div>
+</div>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-100">
+<div class="text-2xl mb-2">🏐</div><div class="font-bold text-blue-900 mb-1">Bola Tampar</div>
+<div class="text-xs text-gray-600">K: Pn. Azalina binti Abdul Wahap<br/>PK: Pn. Siow Hui Lee<br/>+ 2 guru</div>
+</div>
+<div class="bg-red-50 rounded-xl p-4 border border-red-100">
+<div class="text-2xl mb-2">🤾</div><div class="font-bold text-blue-900 mb-1">Bola Baling</div>
+<div class="text-xs text-gray-600">K: Pn. Stella Zujip Augustine<br/>PK: Pn. Norasiah binti Maidin<br/>+ 3 guru</div>
+</div>
+<div class="bg-purple-50 rounded-xl p-4 border border-purple-100">
+<div class="text-2xl mb-2">🏀</div><div class="font-bold text-blue-900 mb-1">Bola Jaring</div>
+<div class="text-xs text-gray-600">K: Pn. Kamsiah binti Sidek<br/>PK: Pn. Dg. Siti Maslianah Talip<br/>+ 2 guru</div>
+</div>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-100">
+<div class="text-2xl mb-2">🏸</div><div class="font-bold text-blue-900 mb-1">Badminton</div>
+<div class="text-xs text-gray-600">K: Pn. Norlina binti Zaini<br/>PK: Pn. Dg. Fatimahwati Pg Yahya<br/>+ 4 guru</div>
+</div>
+<div class="bg-teal-50 rounded-xl p-4 border border-teal-100">
+<div class="text-2xl mb-2">🥏</div><div class="font-bold text-blue-900 mb-1">Frisbee</div>
+<div class="text-xs text-gray-600">K: Pn. Nurhaidah binti Taj Mohamed<br/>PK: Pn. Fatma Wati Ainuddin<br/>+ 3 guru</div>
+</div>
+<div class="bg-indigo-50 rounded-xl p-4 border border-indigo-100">
+<div class="text-2xl mb-2">🦵</div><div class="font-bold text-blue-900 mb-1">Sepak Takraw</div>
+<div class="text-xs text-gray-600">K: En. Ronezal bin Duin<br/>PK: En. Shahrulhafiz bin Md Zain<br/>+ 2 guru</div>
+</div>
+<div class="bg-orange-50 rounded-xl p-4 border border-orange-100">
+<div class="text-2xl mb-2">🏓</div><div class="font-bold text-blue-900 mb-1">Ping Pong</div>
+<div class="text-xs text-gray-600">K: En. Mohd Iqbal Izzet Duraman<br/>PK: Pn. Eva Mayse Laurence<br/>+ 3 guru</div>
+</div>
+</div>
+</div>
+<!-- Kelab -->
+<div class="tab-content" id="kok-kelab">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">🗣️ Kelab Bahasa Melayu</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Dg Siti Farhanah | PK: Pn. Dg. Usnah Madzin</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">📖 Kelab Bahasa Inggeris</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Alicia Selvester Awang | PK: En. Roland T. Moujip</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">🔬 Kelab STEM</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Jemaya Wasiman | PK: Pn. Maria Badar</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">📜 Persatuan Sejarah</div><div class="font-semibold text-blue-900 text-sm">K: Ts. Madzani @ Saidie | PK: Pn. Fatma Wati Ainuddin</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">🌿 Pencinta Alam / SERASI</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Jessie Lawrence Ening | PK: Pn. Dk Saadiah</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">☪️ Persatuan Pelajar Islam</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Nooraffiza | PK: En. Mohd Iqbal Izzet</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">🎨 Seni Budaya</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Noraidah Suntang | PK: Pn. Reja Healfris Adon</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">💼 Kelab Kerjaya</div><div class="font-semibold text-blue-900 text-sm">K: En. Mohammad Nizar | PK: En. Mohammed Lutfi</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">🛒 Kelab Pengguna</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Noorfidah Abd Razak | PK: Pn. Kamsiah Sidek</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">♟️ Kelab Rekreasi (Catur)</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Rukiah Abdullah | PK: Pn. Liew Wen Jun</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">🇲🇾 Kelab Malaysiku</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Siti Hajar Zakaria | PK: Pn. Hasimah Sitam</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">📚 Kelab SPBT</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Dg. Fatimahwati Pg Yahya | PK: Dg. Siti Masliana</div></div>
+<div class="org-card"><div class="text-xs text-gray-500 mb-1">👮 Pencegahan Jenayah</div><div class="font-semibold text-blue-900 text-sm">K: Pn. Surijah Satari | PK: Pn. Norlina Zaini</div></div>
+</div>
+</div>
+<!-- Beruniform -->
+<div class="tab-content" id="kok-uniform">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-blue-900 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">👮</div><div class="font-bold mb-1">Kadet Polis</div>
+<div class="text-xs text-blue-200">K: En. Shahrulhafiz bin Md Zain<br/>PK: Pn. Alicia Selvester Awang<br/>Kawalan: Laluan Masuk Petak 1</div>
+</div>
+<div class="bg-red-700 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">🚒</div><div class="font-bold mb-1">Kadet Bomba &amp; Penyelamat</div>
+<div class="text-xs text-red-200">K: En. Roland T. Moujip<br/>PK: Ts. Madzani @ Saidie bin Nusa<br/>Kawalan: Laluan Masuk Petak 2</div>
+</div>
+<div class="bg-green-800 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">🎖️</div><div class="font-bold mb-1">KRS (Kadet Remaja Sekolah)</div>
+<div class="text-xs text-green-200">K: Cik Siow Hui Lee<br/>PK: Pn. Noorfidah binti Abdul Razak<br/>Kawalan: Laluan Masuk Petak 3</div>
+</div>
+<div class="bg-amber-700 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">🏕️</div><div class="font-bold mb-1">Pengakap</div>
+<div class="text-xs text-amber-200">K: Pn. Maria Badar<br/>PK: Pn. Dg Nor Junah Awang<br/>Kawalan: Laluan Masuk Petak 4</div>
+</div>
+<div class="bg-pink-700 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">🩺</div><div class="font-bold mb-1">Bulan Sabit Merah (PBSM)</div>
+<div class="text-xs text-pink-200">K: Pn. Hasimah binti Sitam<br/>PK: Pn. Noraidah binti Suntang<br/>Kawalan: Laluan Masuk Petak 5</div>
+</div>
+<div class="bg-purple-800 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">🌙</div><div class="font-bold mb-1">Pergerakan Puteri Islam (PPIM)</div>
+<div class="text-xs text-purple-200">K: Pn. Dk Saadiah binti Awang Alimat<br/>PK: Pn. Dg. Siti Maslianah Talip<br/>Kawalan: Laluan Masuk Petak 6</div>
+</div>
+<div class="bg-teal-700 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">⚜️</div><div class="font-bold mb-1">Pandu Puteri</div>
+<div class="text-xs text-teal-200">K: Cik Eva Mayse Laurence<br/>PK: Pn. Reja Healfris Adon<br/>Kawalan: Laluan Masuk Petak 7</div>
+</div>
+<div class="bg-indigo-700 text-white rounded-xl p-5">
+<div class="text-3xl mb-2">🚦</div><div class="font-bold mb-1">Kadet JPJ</div>
+<div class="text-xs text-indigo-200">K: Pn. Liew Wen Jun<br/>PK: Pn. Surijah binti Satari<br/>Kawalan: Laluan Masuk Petak 8</div>
+</div>
+</div>
+</div>
+<!-- Rumah Sukan -->
+<div class="tab-content" id="kok-rumah">
+<div class="grid md:grid-cols-2 gap-4">
+<div class="bg-white rounded-xl p-5 shadow border-l-4 rumah-beta">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center text-white font-bold text-sm">β</div>
+<div><div class="font-bold text-blue-900">RUMAH SUKAN BETA (MERAH)</div><div class="text-xs text-gray-500">No. Peserta: 100–199 | Penasihat: En. Banjamin @ Ismail bin Atin</div></div>
+</div>
+<div class="text-xs text-gray-600 grid grid-cols-2 gap-1">
+<span>✓ Pn. Dk Saadiah (K)</span><span>✓ Ustazah Nooraffiza (PK)</span>
+<span>✓ En. Mohammed Lutfi</span><span>✓ En. Ronezal bin Duin</span>
+<span>✓ Pn. Maria binti Badar</span><span>✓ Pn. Stella Zujip Augustine</span>
+<span>✓ Pn. Reja Healfris Adon</span><span>✓ Pn. Dg Nor Junah Awang</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow border-l-4 rumah-delta">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm">δ</div>
+<div><div class="font-bold text-blue-900">RUMAH SUKAN DELTA (BIRU)</div><div class="text-xs text-gray-500">No. Peserta: 001–099 | Penasihat: Pn. Noor Liana Abdullah</div></div>
+</div>
+<div class="text-xs text-gray-600 grid grid-cols-2 gap-1">
+<span>✓ Pn. Surijah Satari (K)</span><span>✓ Pn. Hasimah Sitam (PK)</span>
+<span>✓ Pn. Dg Fatimahwati</span><span>✓ Ustaz Iqbal Izzet</span>
+<span>✓ Pn. Jessie Lawrence</span><span>✓ En. Afandi bin Yahya</span>
+<span>✓ Pn. Dg Siti Maslianah</span><span>✓ Pn. Eva Mayse Laurence</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow border-l-4 rumah-gamma">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-sm">γ</div>
+<div><div class="font-bold text-blue-900">RUMAH SUKAN GAMMA (HIJAU)</div><div class="text-xs text-gray-500">No. Peserta: 200–299 | Penasihat: En. A.M. Norjaini</div></div>
+</div>
+<div class="text-xs text-gray-600 grid grid-cols-2 gap-1">
+<span>✓ Pn. Dg Usnah Madzin (K)</span><span>✓ Pn. Norasiah Maidin (PK)</span>
+<span>✓ En. Roland T. Moujip</span><span>✓ Ts. Madzani @ Saidie</span>
+<span>✓ Pn. Dg Siti Farhana</span><span>✓ Pn. Kamsiah Sidek</span>
+<span>✓ Pn. Noraidah Suntang</span><span>✓ En. Afandy bin Yubah</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 shadow border-l-4 rumah-alpha">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-sm">α</div>
+<div><div class="font-bold text-blue-900">RUMAH SUKAN ALPHA (KUNING)</div><div class="text-xs text-gray-500">No. Peserta: 300–399 | Penasihat: En. A. Matusin Pg Rambang</div></div>
+</div>
+<div class="text-xs text-gray-600 grid grid-cols-2 gap-1">
+<span>✓ Pn. Siow Hui Lee (K)</span><span>✓ Pn. Alicia Selvester (PK)</span>
+<span>✓ Pn. Jemaya Wasiman</span><span>✓ Pn. Nurhaidah Taj Mohamed</span>
+<span>✓ En. Shahrulhafiz Md Zain</span><span>✓ Pn. Fatma Wati</span>
+<span>✓ Pn. Noorfidah Abd Razak</span><span>✓ En. Mohammad Nizar</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Jadual Perjumpaan -->
+<div class="tab-content" id="kok-jadual">
+<div class="bg-blue-50 rounded-xl p-5 mb-4 border border-blue-100">
+<div class="font-bold text-blue-900 mb-1">⏰ Waktu Perjumpaan Kokurikulum 2025</div>
+<div class="text-sm text-gray-700">Setiap <strong>Selasa &amp; Rabu</strong> — 1:30 PTG hingga 3:30 PTG</div>
+</div>
+<div class="table-wrapper">
+<table>
+<thead><tr><th>Nama Program / Aktiviti</th><th>Penyelaras</th></tr></thead>
+<tbody>
+<tr><td>Karnival Sukan &amp; Permainan</td><td>Pn. Alicia Selvester Awang</td></tr>
+<tr><td>Karnival Badan Beruniform</td><td>Pn. Dg. Nor Junah Awang Mohd Yousoff</td></tr>
+<tr><td>Karnival STEM / Kelab &amp; Persatuan</td><td>Pn. Norlina binti Zaini</td></tr>
+<tr><td>Kebudayaan / Karnival Seni</td><td>Pn. Noraidah binti Suntang</td></tr>
+<tr><td>Nasyid / Kompang</td><td>Pn. Dg Siti Maslianah binti Talip</td></tr>
+<tr><td>Pantun / Pidato</td><td>Pn. Dg Usnah binti Madzin</td></tr>
+<tr><td>Bahas Ala Parlimen / Forum</td><td>Pn. Dg. Usnah binti Madzin</td></tr>
+<tr><td>Kawad Kaki</td><td>En. Shahrulhafiz bin Md Zain</td></tr>
+<tr><td>MTQ (Musabaqah Tilawah Al-Quran)</td><td>Ustazah Nooraffiza binti Osman</td></tr>
+<tr><td>Khatam Quran / Ihya Ramadhan / Khat</td><td>Ustaz Mohd Iqbal Izzet bin Duraman</td></tr>
+<tr><td>Choral / Public Speaking</td><td>Pn. Siow Hui Lee</td></tr>
+<tr><td>Merentas Desa</td><td>En. Ronezal bin Duin</td></tr>
+<tr><td>Debate / Drama BI</td><td>En. Roland T. Moujip</td></tr>
+<tr><td>Bulan Kemerdekaan / Hasanah</td><td>En. Madzani @ Saidie bin Nusa</td></tr>
+<tr><td>Sambutan Hari Guru</td><td>Pn. Dg Nor Junah Awang Mohd Yousoff</td></tr>
+<tr><td>Nyanyian / Muzik / Koir</td><td>Pn. Reja Healfris Adon</td></tr>
+<tr><td>Hari Sukan Negara</td><td>Pn. Liew Wen Jun</td></tr>
+<tr><td>Program UBK / PPDa</td><td>En. Mohammad Nizar bin Abdul Miri</td></tr>
+<tr><td>Program Kerjaya</td><td>En. Mohammed Lutfi bin Mohd Kalid</td></tr>
+<tr><td>Program Kolaborasi Kokurikulum</td><td>Pn. Nurhaidah Taj Mohamed</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======== DATA MURID ======== -->
+<section class="section-container" id="murid">
+<div class="murid-premium-section">
+<div class="max-w-screen-xl mx-auto px-4 lg:px-6">
+<div class="murid-hero-card">
+<div class="murid-title-wrap">
+<div class="murid-accent"></div>
+<div>
+<div class="page-title premium-title">📊 Data Murid SMK Kimanis</div>
+<div class="page-subtitle premium-subtitle">Senarai murid rasmi sesi 2026 · Kelas XEA4264 · Dikemas kini: 08 Mac 2026</div>
+</div>
+</div>
+<div class="murid-badge">Portal Akademik Rasmi</div>
+</div>
+
+<div class="premium-stats-grid">
+<div class="premium-stat-card total">
+<div class="stat-label">Jumlah Murid</div>
+<div class="stat-value" id="stat-total">—</div>
+<div class="stat-note">Berdasarkan senarai CSV terkini</div>
+</div>
+<div class="premium-stat-card classes">
+<div class="stat-label">Bilangan Kelas</div>
+<div class="stat-value" id="stat-kelas">—</div>
+<div class="stat-note">Paparan mengikut data semasa</div>
+</div>
+<div class="premium-stat-card status">
+<div class="stat-label">Status Data</div>
+<div class="stat-value small">Tepat</div>
+<div class="stat-note">Diselaraskan dengan senarai nama murid</div>
+</div>
+</div>
+
+<div class="premium-filter-card">
+<div class="filter-headline">Carian dan tapisan rekod murid</div>
+<div class="premium-filter-grid">
+<div>
+<label class="premium-label" for="search-murid">Cari Nama Murid</label>
+<input class="search-box premium-input" id="search-murid" placeholder="Taip nama murid untuk carian pantas" type="text"/>
+</div>
+<div>
+<label class="premium-label" for="filter-kelas">Kelas</label>
+<select class="premium-select" id="filter-kelas" onchange="filterMurid()">
+<option value="">Semua Kelas</option>
+</select>
+</div>
+</div>
+<div class="premium-filter-footer">
+<div class="result-pill" id="result-count">0 murid dipaparkan</div>
+<button class="premium-reset-btn" onclick="resetFilter()">↺ Reset Paparan</button>
+</div>
+</div>
+
+<div class="premium-table-card">
+<div class="table-card-header">
+<div>
+<h3>Senarai Nama Murid</h3>
+<p>Maklumat dipaparkan berasaskan fail senarai murid yang dimuat naik.</p>
+</div>
+<div class="table-chip">Rekod Rasmi</div>
+</div>
+<div class="table-wrapper premium-table-wrapper">
+<table class="sticky-header premium-table" id="murid-table">
+<thead>
+<tr>
+<th>#</th>
+<th>Kelas</th>
+<th>Nama Murid</th>
+<th>Jantina</th>
+<th>Keturunan</th>
+<th>Agama</th>
+</tr>
+</thead>
+<tbody id="murid-tbody">
+<tr><td class="text-center py-8 text-gray-400" colspan="6">⏳ Memuatkan data murid...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="premium-footnote">Sumber data: Senarai Murid XEA4264 05-03-2026.csv</div>
+</div>
+</div>
+</section>
+<!-- ======== PIBG ======== -->
+<section class="section-container" id="pibg">
+<div class="py-10 px-4 bg-gray-50">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<div class="page-title">👨‍👩‍👧 PIBG</div>
+<div class="page-subtitle">Persatuan Ibu Bapa dan Guru SMK Kimanis 2025</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
+<h3 class="font-bold text-xl text-blue-900 mb-4">👔 Jawatankuasa PIBG</h3>
+<div class="space-y-0">
+<div class="info-row"><span class="text-gray-500 text-sm">Yang Dipertua</span><span class="font-semibold text-blue-900 text-sm">Pn. Masneh binti Papang</span></div>
+<div class="info-row"><span class="text-gray-500 text-sm">Naib Yang Dipertua</span><span class="font-semibold text-blue-900 text-sm">Pn. Asmah @ Nora binti Abdul Rahman</span></div>
+<div class="info-row"><span class="text-gray-500 text-sm">Setiausaha</span><span class="font-semibold text-blue-900 text-sm">Pn. Jemaya binti Wasiman (Guru)</span></div>
+<div class="info-row"><span class="text-gray-500 text-sm">Bendahari</span><span class="font-semibold text-blue-900 text-sm">Pn. Noor Liana binti Abdullah</span></div>
+<div class="info-row"><span class="text-gray-500 text-sm">Juru Audit</span><span class="font-semibold text-blue-900 text-sm">En. Mohd Suhaili bin Ag. Damit</span></div>
+<div class="info-row"><span class="text-gray-500 text-sm">Penasihat</span><span class="font-semibold text-blue-900 text-sm">En. Banjamin @ Ismail bin Atin (Pengetua)</span></div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+<h3 class="font-bold text-xl text-blue-900 mb-4">📋 AJK PIBG</h3>
+<div class="space-y-2 text-sm">
+<div class="bg-blue-50 p-3 rounded-lg"><div class="font-semibold text-blue-900">Pn. Surijah binti Satari</div><div class="text-xs text-gray-500">GKMP Bahasa</div></div>
+<div class="bg-blue-50 p-3 rounded-lg"><div class="font-semibold text-blue-900">Cik Azalina binti Abdul Wahap</div><div class="text-xs text-gray-500">GKMP Sains Sosial</div></div>
+<div class="bg-blue-50 p-3 rounded-lg"><div class="font-semibold text-blue-900">En. Ronezal bin Duin</div><div class="text-xs text-gray-500">GKMP Sains &amp; Matematik</div></div>
+<div class="bg-blue-50 p-3 rounded-lg"><div class="font-semibold text-blue-900">Ts. Madzani @ Saidie bin Nusa</div><div class="text-xs text-gray-500">GKMP TVET</div></div>
+<div class="bg-blue-50 p-3 rounded-lg"><div class="font-semibold text-blue-900">En. Afandy bin Yubah</div><div class="text-xs text-gray-500">Ketua Guru Disiplin</div></div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500 md:col-span-2">
+<h3 class="font-bold text-xl text-blue-900 mb-4">🎯 Program PIBG</h3>
+<div class="grid sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+<div class="bg-green-50 p-3 rounded-lg text-center"><div class="text-2xl mb-1">📚</div><div class="font-semibold text-blue-900">Membimbing Pelajar</div></div>
+<div class="bg-green-50 p-3 rounded-lg text-center"><div class="text-2xl mb-1">🏆</div><div class="font-semibold text-blue-900">Aktiviti Kemasyarakatan</div></div>
+<div class="bg-green-50 p-3 rounded-lg text-center"><div class="text-2xl mb-1">💡</div><div class="font-semibold text-blue-900">Seminar Parenting</div></div>
+<div class="bg-green-50 p-3 rounded-lg text-center"><div class="text-2xl mb-1">🎉</div><div class="font-semibold text-blue-900">Sambutan Hari Keluarga</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======== TAKWIM ======== -->
+<section class="section-container" id="takwim">
+<div class="py-10 px-4 bg-white">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<div class="page-title">📅 Takwim &amp; Jadual Bertugas</div>
+<div class="page-subtitle">Jadual Guru Bertugas Mingguan 2026</div>
+</div>
+<!-- Takwim Akademik 2026 — Kumpulan B (Sabah) -->
+<div class="mb-6">
+<div class="font-bold text-blue-900 mb-3 text-base flex items-center gap-2">📆 Kalendar Akademik 2026 — Kumpulan B (Sabah)</div>
+<!-- Penggal 1 -->
+<div class="mb-4 bg-blue-50 rounded-xl border border-blue-100 overflow-hidden">
+<div class="bg-blue-700 text-white px-4 py-2 font-bold text-sm">📘 PENGGAL 1 — 43 Hari Persekolahan</div>
+<div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-blue-100">
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 1–6</div><div class="font-semibold text-blue-900 text-sm">12 Jan – 28 Feb 2026</div><div class="text-xs text-gray-500">30 hari</div></div>
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 7–10</div><div class="font-semibold text-blue-900 text-sm">1 Mac – 20 Mac 2026</div><div class="text-xs text-gray-500">13 hari</div></div>
+<div class="px-4 py-3 bg-amber-50"><div class="text-xs text-amber-700 font-semibold uppercase mb-1">🏖 Cuti Penggal 1</div><div class="font-semibold text-amber-800 text-sm">21 Mac – 29 Mac 2026</div><div class="text-xs text-amber-600">9 hari (termasuk Hari Raya Aidilfitri 21–22 Mac)</div></div>
+</div>
+</div>
+<!-- Penggal 2 -->
+<div class="mb-4 bg-green-50 rounded-xl border border-green-100 overflow-hidden">
+<div class="bg-green-700 text-white px-4 py-2 font-bold text-sm">📗 PENGGAL 2 — 39 Hari Persekolahan</div>
+<div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-green-100">
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 1–4</div><div class="font-semibold text-green-900 text-sm">30 Mac – 30 Apr 2026</div><div class="text-xs text-gray-500">22 hari</div></div>
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 5–8</div><div class="font-semibold text-green-900 text-sm">1 Mei – 22 Mei 2026</div><div class="text-xs text-gray-500">15 hari (1 Mei: Hari Pekerja)</div></div>
+<div class="px-4 py-3 bg-amber-50"><div class="text-xs text-amber-700 font-semibold uppercase mb-1">🏖 Cuti Pertengahan Tahun</div><div class="font-semibold text-amber-800 text-sm">23 Mei – 7 Jun 2026</div><div class="text-xs text-amber-600">16 hari (30–31 Mei: Pesta Kaamatan)</div></div>
+</div>
+</div>
+<!-- Penggal 3 -->
+<div class="mb-4 bg-purple-50 rounded-xl border border-purple-100 overflow-hidden">
+<div class="bg-purple-700 text-white px-4 py-2 font-bold text-sm">📙 PENGGAL 3 — 58 Hari Persekolahan</div>
+<div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-purple-100">
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 1–4</div><div class="font-semibold text-purple-900 text-sm">8 Jun – 30 Jun 2026</div><div class="text-xs text-gray-500">16 hari</div></div>
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 5–12</div><div class="font-semibold text-purple-900 text-sm">1 Jul – 28 Ogos 2026</div><div class="text-xs text-gray-500">42 hari (31 Ogos: Hari Merdeka)</div></div>
+<div class="px-4 py-3 bg-amber-50"><div class="text-xs text-amber-700 font-semibold uppercase mb-1">🏖 Cuti Penggal 2</div><div class="font-semibold text-amber-800 text-sm">29 Ogos – 6 Sep 2026</div><div class="text-xs text-amber-600">9 hari</div></div>
+</div>
+</div>
+<!-- Penggal 4 -->
+<div class="mb-4 bg-rose-50 rounded-xl border border-rose-100 overflow-hidden">
+<div class="bg-rose-700 text-white px-4 py-2 font-bold text-sm">📕 PENGGAL 4 — 62 Hari Persekolahan</div>
+<div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-rose-100">
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 1–5</div><div class="font-semibold text-rose-900 text-sm">7 Sep – 31 Okt 2026</div><div class="text-xs text-gray-500">39 hari (16 Sep: Malaysia Day)</div></div>
+<div class="px-4 py-3"><div class="text-xs text-gray-500 font-semibold uppercase mb-1">Minggu 6–13</div><div class="font-semibold text-rose-900 text-sm">1 Nov – 4 Dis 2026</div><div class="text-xs text-gray-500">23 hari (8–10 Nov: Deepavali)</div></div>
+<div class="px-4 py-3 bg-amber-50"><div class="text-xs text-amber-700 font-semibold uppercase mb-1">🏖 Cuti Akhir Persekolahan</div><div class="font-semibold text-amber-800 text-sm">5 Dis – 31 Dis 2026</div><div class="text-xs text-amber-600">27 hari (25 Dis: Krismas)</div></div>
+</div>
+</div>
+<!-- Cuti Perayaan Summary -->
+<div class="bg-white rounded-xl border border-gray-200 p-4 mb-2">
+<div class="font-bold text-blue-900 mb-3 text-sm">🎉 Cuti Perayaan Utama 2026 (Sabah — Kumpulan B)</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
+<div class="flex items-start gap-2 bg-red-50 rounded-lg px-3 py-2"><span>🧧</span><div><div class="font-semibold text-red-800">Tahun Baru Cina</div><div class="text-gray-600">17–20 Feb 2026 (Isnin–Khamis)</div></div></div>
+<div class="flex items-start gap-2 bg-green-50 rounded-lg px-3 py-2"><span>🌙</span><div><div class="font-semibold text-green-800">Hari Raya Aidilfitri</div><div class="text-gray-600">19–22 Mac 2026 (Khamis–Ahad)</div></div></div>
+<div class="flex items-start gap-2 bg-orange-50 rounded-lg px-3 py-2"><span>🌺</span><div><div class="font-semibold text-orange-800">Pesta Kaamatan (Sabah)</div><div class="text-gray-600">30–31 Mei 2026 (Sabtu–Ahad)</div></div></div>
+<div class="flex items-start gap-2 bg-blue-50 rounded-lg px-3 py-2"><span>🇲🇾</span><div><div class="font-semibold text-blue-800">Hari Merdeka</div><div class="text-gray-600">31 Ogos 2026 (Isnin)</div></div></div>
+<div class="flex items-start gap-2 bg-blue-50 rounded-lg px-3 py-2"><span>🇲🇾</span><div><div class="font-semibold text-blue-800">Hari Malaysia</div><div class="text-gray-600">16 Sep 2026 (Rabu)</div></div></div>
+<div class="flex items-start gap-2 bg-yellow-50 rounded-lg px-3 py-2"><span>🪔</span><div><div class="font-semibold text-yellow-800">Hari Deepavali</div><div class="text-gray-600">9–10 Nov 2026 (Isnin–Selasa)</div></div></div>
+<div class="flex items-start gap-2 bg-red-50 rounded-lg px-3 py-2"><span>🎄</span><div><div class="font-semibold text-red-800">Hari Krismas</div><div class="text-gray-600">25 Dis 2026 (Jumaat) — dalam cuti</div></div></div>
+</div>
+</div>
+</div>
+<!-- Jadual Bertugas -->
+<div class="table-wrapper">
+<table class="sticky-header" id="jadual-table">
+<thead>
+<tr>
+<th style="width:40px">M</th>
+<th>Tarikh</th>
+<th>Guru Bertugas</th>
+<th>GKMP Bertugas</th>
+<th>Tema 5MP</th>
+</tr>
+</thead>
+<tbody id="jadual-tbody"></tbody>
+</table>
+</div>
+<!-- Senarai tugas bertugas -->
+<div class="mt-6 bg-blue-50 rounded-xl p-5 border border-blue-100">
+<div class="font-bold text-blue-900 mb-3">📋 Senarai Tugas Guru Bertugas Mingguan</div>
+<div class="grid md:grid-cols-2 gap-2 text-sm text-gray-700">
+<div>1. Bertugas di pintu masuk (Guru Penyayang) semasa kedatangan &amp; kepulangan</div>
+<div>2. Menguruskan Perhimpunan Rasmi, Perhimpunan Kokurikulum &amp; perhimpunan semasa</div>
+<div>3. Menyampaikan Slot 5 Minit Pendidikan Sivik Dalam Perhimpunan</div>
+<div>4. Menyediakan Jadual Relief (Guru Ganti)</div>
+<div>5. Melaksanakan kawalan dan rondaan pada waktu rehat</div>
+<div>6. Membuat penilaian kebersihan dan keceriaan kelas</div>
+<div>7. Menulis laporan bertugas dan menyampaikan semasa perhimpunan</div>
+<div>8. Merancang dan melaksanakan aktiviti mengikut keperluan</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======== HUBUNGI ======== -->
+<section class="section-container" id="hubungi">
+<div class="py-10 px-4 bg-white">
+<div class="max-w-screen-xl mx-auto">
+<div class="section-header">
+<div class="page-title">📞 Hubungi Kami</div>
+<div class="page-subtitle">Maklumat Perhubungan SMK Kimanis</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="bg-blue-50 rounded-xl p-5 flex gap-4 items-start">
+<span class="text-3xl">📍</span>
+<div>
+<div class="font-bold text-blue-900 mb-1">Alamat</div>
+<div class="text-sm text-gray-700">Peti Surat 18<br/>89700 Bongawan, Papar<br/>Sabah, Malaysia</div>
+</div>
+</div>
+<div class="bg-green-50 rounded-xl p-5 flex gap-4 items-start">
+<span class="text-3xl">📞</span>
+<div>
+<div class="font-bold text-blue-900 mb-1">Telefon</div>
+<div class="text-sm text-gray-700">Pejabat: <a class="text-blue-600 hover:underline" href="tel:088917412">088-917412</a><br/>Setiausaha: Ext. 101</div>
+</div>
+</div>
+<div class="bg-purple-50 rounded-xl p-5 flex gap-4 items-start">
+<span class="text-3xl">📧</span>
+<div>
+<div class="font-bold text-blue-900 mb-1">E-mel Rasmi</div>
+<div class="text-sm"><a class="text-blue-600 hover:underline" href="/cdn-cgi/l/email-protection#4f372a2e7b7d797b0f22202a612a2b3a612236"><span class="__cf_email__" data-cfemail="344c51550006020074595b511a5150411a594d">[email protected]</span></a></div>
+</div>
+</div>
+<div class="bg-amber-50 rounded-xl p-5 flex gap-4 items-start">
+<span class="text-3xl">🕐</span>
+<div>
+<div class="font-bold text-blue-900 mb-1">Waktu Operasi</div>
+<div class="text-sm text-gray-700">Isnin – Jumaat: 7:30 Pagi – 4:30 Petang<br/>Sabtu &amp; Ahad: Tutup</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="font-bold text-xl text-blue-900 mb-1">✉️ Hantar Mesej</h3>
+<p class="text-xs text-gray-400 mb-4 flex items-center gap-1">
+<span>📬</span> Mesej akan dihantar ke: <span class="font-semibold text-blue-700"><a class="__cf_email__" data-cfemail="90f7bda9a3a5a7a0a5a0a8d0fdfff5bdf4fcbef5f4e5befde9" href="/cdn-cgi/l/email-protection">[email protected]</a></span>
+</p>
+<div class="space-y-4" id="contact-form">
+<div>
+<label class="block text-sm font-semibold text-blue-900 mb-1">Nama <span class="text-red-500">*</span></label>
+<input class="search-box" id="c-name" placeholder="Nama penuh anda" type="text"/>
+<p class="text-red-500 text-xs mt-1 hidden" id="err-name">Sila masukkan nama anda.</p>
+</div>
+<div>
+<label class="block text-sm font-semibold text-blue-900 mb-1">E-mel Balas <span class="text-red-500">*</span></label>
+<input class="search-box" id="c-email" placeholder="Email anda (untuk pihak sekolah membalas)" type="email"/>
+<p class="text-red-500 text-xs mt-1 hidden" id="err-email">Sila masukkan e-mel yang sah.</p>
+</div>
+<div>
+<label class="block text-sm font-semibold text-blue-900 mb-1">Subjek <span class="text-red-500">*</span></label>
+<input class="search-box" id="c-subject" placeholder="Subjek mesej" type="text"/>
+<p class="text-red-500 text-xs mt-1 hidden" id="err-subject">Sila masukkan subjek mesej.</p>
+</div>
+<div>
+<label class="block text-sm font-semibold text-blue-900 mb-1">Mesej <span class="text-red-500">*</span></label>
+<textarea class="search-box" id="c-message" placeholder="Tulis mesej anda di sini..." rows="4"></textarea>
+<p class="text-red-500 text-xs mt-1 hidden" id="err-message">Sila masukkan mesej anda.</p>
+</div>
+<button class="w-full py-3 rounded-lg gradient-header text-white font-semibold hover:opacity-90 transition text-sm" id="submit-btn" onclick="handleContact()">
+                📤 Hantar Mesej
+              </button>
+<div class="hidden bg-blue-50 border border-blue-200 rounded-lg p-3 text-xs text-blue-700" id="contact-info-box">
+<strong>ℹ️ Cara menghantar:</strong> Aplikasi e-mel anda (contoh: Outlook, Gmail) akan dibuka secara automatik dengan mesej yang telah diisi. Klik <em>Send / Hantar</em> dalam aplikasi e-mel tersebut untuk menghantar mesej ke pihak sekolah.
+              </div>
+<div class="hidden bg-green-50 border border-green-200 rounded-lg p-3 text-xs text-green-700 text-center" id="contact-success">
+                ✅ <strong>Aplikasi e-mel telah dibuka.</strong> Sila klik <em>Hantar</em> dalam aplikasi e-mel anda untuk menghantar mesej ke pihak sekolah.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Quick Actions -->
+<div class="quick-actions no-print">
+  <button class="quick-action-btn" id="quick-contact" onclick="navigateTo('hubungi')" title="Hubungi">📞</button>
+  <button class="quick-action-btn" id="back-to-top" onclick="scrollToTop()" title="Kembali ke atas">⬆️</button>
+</div>
+
+<!-- Footer -->
+<footer class="gradient-header text-white py-10 px-4 no-print">
+<div class="max-w-screen-xl mx-auto">
+<div class="grid md:grid-cols-3 gap-8 mb-6">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<img alt="Logo" class="w-10 h-10 rounded-full object-cover border-2 border-amber-400/50" onerror="this.src='data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23fff%22 fill-opacity=%220.1%22/&gt;&lt;/svg&gt;'" src="https://i.ibb.co/XZmRd56Q/1-1.png"/>
+<div class="font-heading font-bold text-lg">SMK KIMANIS</div>
+</div>
+<p class="text-blue-200 text-sm italic">"Iltizam Teras Kegemilangan"</p>
+<p class="text-blue-300 text-xs mt-1">"Mun Bakarih, Andang Tah Belurih, Semua Tah Bolih"</p>
+</div>
+<div>
+<div class="font-bold text-amber-300 mb-3 text-sm">Pautan Pantas</div>
+<div class="space-y-1 text-sm">
+<button class="block text-blue-200 hover:text-white transition text-left" onclick="navigateTo('home')">🏠 Utama</button>
+<button class="block text-blue-200 hover:text-white transition text-left" onclick="navigateTo('pengurusan')">📋 Pengurusan</button>
+<button class="block text-blue-200 hover:text-white transition text-left" onclick="navigateTo('murid')">📊 Data Murid</button>
+<button class="block text-blue-200 hover:text-white transition text-left" onclick="navigateTo('kokum')">🏆 Kokurikulum</button>
+</div>
+</div>
+<div>
+<div class="font-bold text-amber-300 mb-3 text-sm">Hubungi</div>
+<div class="space-y-1 text-sm text-blue-200">
+<div>📍 Peti Surat 18, 89700 Bongawan, Papar</div>
+<div>📞 088-917412</div>
+<div>📧 <a class="__cf_email__" data-cfemail="6b130e0a5f595d5f2b06040e450e0f1e450612" href="/cdn-cgi/l/email-protection">[email protected]</a></div>
+<div>⏰ Isnin–Jumaat: 7:30 – 4:30</div>
+</div>
+</div>
+</div>
+<div class="border-t border-blue-700/50 pt-4 text-center text-blue-300 text-xs">
+        © 2026 SMK KIMANIS | Peti Surat 18, 89700 Bongawan Papar, Sabah
+      </div>
+</div>
+</footer>
+</div>
+
+<script src="assets/js/data/murid-data.js"></script>
+<script src="assets/js/data/staff-data.js"></script>
+<script src="assets/js/core/navigation.js"></script>
+<script src="assets/js/core/tabs.js"></script>
+<script src="assets/js/features/murid.js"></script>
+<script src="assets/js/features/staff.js"></script>
+<script src="assets/js/features/jadual.js"></script>
+<script src="assets/js/features/contact.js"></script>
+<script src="assets/js/app-init.js"></script>
+</body>
+</html>
