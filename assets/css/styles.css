@@ -362,3 +362,8 @@ footer .max-w-screen-xl{position:relative;z-index:1}
   .topbar-right span{display:inline-block;margin-right:.75rem;margin-top:.35rem}
   .page-title,.premium-title{font-size:1.55rem!important}
 }
+.hero-video-card iframe{
+  width: 100%;
+  border: 0;
+  border-radius: 16px;
+}
