@@ -47,3 +47,9 @@ Nota:
 Kemaskini V6: Data murid disegerakkan semula daripada fail 'Murid Tahun 2026.xlsx' terkini.
 
 Versi V7: Naik taraf penuh reka bentuk portal kepada tema korporat rasmi yang lebih premium.
+
+
+V12 tambahan:
+- Halaman khas unit HEM dalam folder pages/units/
+- Fail data ahli unit: assets/js/data/unit-members.js
+- Fail render unit: assets/js/features/unit-directory.js
