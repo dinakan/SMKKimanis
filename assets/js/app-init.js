@@ -1,7 +1,7 @@
 (function (window, document) {
   function initDefaultTabs() {
     if (window.switchTab) {
-      window.switchTab('peng', 'SLT');
+      window.switchTab('peng', 'ucapan');
       window.switchTab('kur', 'kelas');
       window.switchTab('kok', 'jadual');
     }
@@ -24,6 +24,10 @@
     }
     if (window.PortalApp && window.PortalApp.jadual) window.PortalApp.jadual.renderJadual();
     if (window.PortalApp && window.PortalApp.staff) window.PortalApp.staff.renderStaff();
+    if (window.PortalApp && window.PortalApp.premiumModules) {
+      window.PortalApp.premiumModules.renderUcapanPengetua();
+      window.PortalApp.premiumModules.renderOprGallery();
+    }
     initDefaultTabs();
     if (window.PortalApp && window.PortalApp.navigation) window.PortalApp.navigation.initQuickActions();
     initHashNavigation();
