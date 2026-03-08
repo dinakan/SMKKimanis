@@ -51,37 +51,79 @@ const jadualData = [
 
 const LOGO_URL = 'https://i.ibb.co/XZmRd56Q/1-1.png';
 
-const guruList = [
+const sltList = [
+  { role: "Pengetua", roleClass: "amber", nama: "En. Banjamin @ Ismail bin Atin", meta: "Gred DG14 | Opsyen: Ekonomi/Akaun", photo: "assets/images/slt/pengetua.jpg" },
+  { role: "Penolong Kanan Pentadbiran", roleClass: "green", nama: "Pn. Noor Liana binti Abdullah", meta: "Gred DG12 | Opsyen: Biologi", photo: "assets/images/slt/liana.jpg" },
+  { role: "PK Hal Ehwal Murid", roleClass: "purple", nama: "En. A.M. Norjaini bin Awang Besar", meta: "Gred DG12 | Opsyen: Bahasa Melayu", photo: "assets/images/slt/norjaini.jpg" },
+  { role: "PK Kokurikulum", roleClass: "amber", nama: "En. A. Matusin bin Pg. Rambang", meta: "Gred DG12 | Opsyen: Geografi", photo: "assets/images/slt/matusin.jpg" }
+];
 
-  "Afandi bin Yahya","Afandy bin Yubah","Alicia Selvester Awang",
-  "Arinah binti Ajuk @ Ajok","Dg. Fatimahwati binti Pg. Yahya",
-  "Dgku. Saadiah binti Awg. Alimat","Dayang Siti Farhanah binti Sulaiman",
-  "Dg. Nor Junah Awang Mohd Yousoff","Dg. Siti Masliana binti Talip",
-  "Dg Wan Shazwani binti Ag. Ibrahim","Eva Mayse Laurence","Fatma Wati binti Ainuddin",
-  "Halimah binti Abdul Rahman","Hasimah binti Sitam","Jemaya binti Wasiman",
-  "Jessie Lawrence Ening","Kamsiah binti Sidek","Liew Wen Jun",
-  "Mohd Iqbal Izzet bin Duraman","Nooraffiza binti Osman","Noorfidah binti Abd. Razak",
-  "Noraidah binti Suntang","Norasiah binti Maidin","Norlina binti Zaini",
-  "Nurfatin binti Nasir","Reja Healfris Adon","Roland T. Moujip",
-  "Rukiah binti Abdullah","Shahrulhafiz bin Md. Zain","Shiendma binti Simen",
-  "Siow Hui Lee","Siti Hajar binti Zakaria","Ts. Madzani @ Saidie bin Nusa"
+const gkmpList = [
+  { role: "GKMP Bahasa", roleClass: "blue", nama: "Pn. Surijah binti Satari", meta: "Gred DG12 | Kesusasteraan Melayu", photo: "assets/images/gkmp/surijah.jpg" },
+  { role: "GKMP Sains & Matematik", roleClass: "green", nama: "En. Ronezal bin Duin", meta: "Gred DG12 | Matematik/Fizik", photo: "assets/images/gkmp/ronezal.jpg" },
+  { role: "GKMP TVET", roleClass: "purple", nama: "Ts. Madzani @ Saidie bin Nusa", meta: "Gred DG14 | Sejarah / P. Moral", photo: "assets/images/gkmp/madzani.jpeg" },
+  { role: "GKMP Sains Sosial", roleClass: "amber", nama: "Cik Azalina binti Abdul Wahap", meta: "Gred DG12 | Sejarah", photo: "assets/images/gkmp/azalina.jpg" }
+];
+
+const guruList = [
+  { nama: "Afandi bin Yahya", photo: "assets/images/guru/afandiyahya.jpg", featured: true },
+  { nama: "Afandy bin Yubah", photo: "assets/images/guru/afandyyubah.jpg", featured: true },
+  { nama: "Alicia Selvester Awang", photo: "assets/images/guru/alicia.jpg", featured: true },
+  { nama: "Arinah binti Ajuk @ Ajok", photo: "assets/images/guru/arinah.jpg", featured: true },
+  { nama: "Dg. Fatimahwati binti Pg. Yahya", photo: "assets/images/guru/fatimahwati.jpg" },
+  { nama: "Dgku. Saadiah binti Awg. Alimat", photo: "assets/images/guru/saadiah.jpg" },
+  { nama: "Dayang Siti Farhanah binti Sulaiman", photo: "assets/images/guru/farhana.jpg" },
+  { nama: "Dg. Nor Junah Awang Mohd Yousoff", photo: "assets/images/guru/junah.jpg" },
+  { nama: "Dg. Siti Masliana binti Talip", photo: "assets/images/guru/masliana.jpg" },
+  { nama: "Dg Wan Shazwani binti Ag. Ibrahim", photo: "assets/images/guru/wan.jpg" },
+  { nama: "Eva Mayse Laurence", photo: "assets/images/guru/eva.jpg" },
+  { nama: "Fatma Wati binti Ainuddin", photo: "assets/images/guru/fatma.jpg" },
+  { nama: "Halimah binti Abdul Rahman", photo: "assets/images/guru/halimah.jpg" },
+  { nama: "Hasimah binti Sitam", photo: "assets/images/guru/hasimah.jpg" },
+  { nama: "Jemaya binti Wasiman", photo: "assets/images/guru/jemaya.jpg" },
+  { nama: "Jessie Lawrence Ening", photo: "assets/images/guru/jessie.jpg" },
+  { nama: "Kamsiah binti Sidek", photo: "assets/images/guru/kamsiah.jpg" },
+  { nama: "Liew Wen Jun", photo: "assets/images/guru/jun.jpeg" },
+  { nama: "Mohd Iqbal Izzet bin Duraman", photo: "assets/images/guru/iqbal.jpg" },
+  { nama: "Nooraffiza binti Osman", photo: "assets/images/guru/noorfizah.jpg" },
+  { nama: "Noorfidah binti Abd. Razak", photo: "assets/images/guru/noorfidah.jpg" },
+  { nama: "Noraidah binti Suntang", photo: "assets/images/guru/noraidah.jpg" },
+  { nama: "Norasiah binti Maidin", photo: "assets/images/guru/norasiah.jpg" },
+  { nama: "Norlina binti Zaini", photo: "assets/images/guru/norlina.jpg" },
+  { nama: "Nurfatin binti Nasir", photo: "assets/images/guru/fatin.jpg" },
+  { nama: "Reja Healfris Adon", photo: "assets/images/guru/reja.jpg" },
+  { nama: "Roland T. Moujip", photo: "assets/images/guru/roland.jpg" },
+  { nama: "Rukiah binti Abdullah", photo: "assets/images/guru/rukiah.jpg" },
+  { nama: "Shahrulhafiz bin Md. Zain", photo: "assets/images/guru/hafiz.jpg" },
+  { nama: "Shiendma binti Simen", photo: "assets/images/guru/shiedma.jpg" },
+  { nama: "Siow Hui Lee", photo: "assets/images/guru/siow.jpg" },
+  { nama: "Siti Hajar binti Zakaria", photo: "assets/images/guru/hajar.jpg" },
+  { nama: "Ts. Madzani @ Saidie bin Nusa", photo: "assets/images/gkmp/madzani.jpeg" },
+  { nama: "Ustazah Dg. Norafiqah binti Mohd Said", photo: "assets/images/guru/norafiqah.jpg" }
 ];
 
 const kaunselorList = [
-
-  { nama: "En. Mohammad Nizar bin Abdul Miri", jawatan: "Guru Bimbingan & Kaunseling", tugas: "Pembimbing Rakan Sebaya / Cegah Buli" },
-  { nama: "En. Mohammed Lutfi bin Mohd Kalid", jawatan: "Guru Bimbingan & Kaunseling", tugas: "Sekolah Penyayang / ADNI" }
+  { nama: "En. Mohammad Nizar bin Abdul Miri", jawatan: "Guru Bimbingan & Kaunseling", tugas: "Pembimbing Rakan Sebaya / Cegah Buli", photo: "assets/images/kaunselor/nizar.jpg" },
+  { nama: "En. Mohammed Lutfi bin Mohd Kalid", jawatan: "Guru Bimbingan & Kaunseling", tugas: "Sekolah Penyayang / ADNI", photo: "assets/images/kaunselor/lutfi.jpg" }
 ];
 
 const akpList = [
-
-  "Ag. Abdul Rahim bin Ag. Damit","Ag. Syamsuri bin Ag. Kadir","Jamaludin bin Matusin",
-  "Masdianah binti Martin","Masnie binti Moksin","Mohd Suhaili bin Ag. Damit",
-  "Norhayati binti Mahmud","Siti Animah binti Ismail","Thressie Jean Charly"
+  { nama: "Ag. Abdul Rahim bin Ag. Damit", photo: "assets/images/akp/rahim.jpg" },
+  { nama: "Ag. Syamsuri bin Ag. Kadir", photo: "assets/images/akp/syamsuri.jpg" },
+  { nama: "Jamaludin bin Matusin", photo: "assets/images/akp/jamal.jpg" },
+  { nama: "Masdianah binti Martin", photo: "assets/images/akp/masdiana.jpg" },
+  { nama: "Masnie binti Moksin", photo: "assets/images/akp/masnie.jpg" },
+  { nama: "Mohd Suhaili bin Ag. Damit", photo: "assets/images/akp/suhaili.jpg" },
+  { nama: "Norhayati binti Mahmud", photo: "assets/images/akp/norhayati.jpg" },
+  { nama: "Siti Animah binti Ismail", photo: "assets/images/akp/sitianimah.jpg" },
+  { nama: "Thressie Jean Charly", photo: "assets/images/akp/thressie.jpg" }
 ];
 
 window.jadualData = jadualData;
 window.LOGO_URL = LOGO_URL;
+window.sltList = sltList;
+window.gkmpList = gkmpList;
 window.guruList = guruList;
 window.kaunselorList = kaunselorList;
 window.akpList = akpList;
+
